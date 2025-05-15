@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004080; /* Azul corporativo oscuro */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 5px solid #ffab00; /* Naranja corporativo */
+}
+#logo {
+    float: left;
+    margin-left: 20px;
+    height: 50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para el diagrama Mermaid */
+.mermaid {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.mermaid svg .node { /* Para todos los nodos */
+    cursor: pointer;
+}
+.mermaid svg .node rect,
+.mermaid svg .node polygon,
+.mermaid svg .node circle,
+.mermaid svg .node ellipse {
+    fill: #e6f3ff; /* Azul claro para nodos */
+    stroke: #004080; /* Borde azul oscuro */
+    stroke-width: 2px;
+}
+.mermaid svg .node.clickable:hover rect, /* Solo nodos clickables */
+.mermaid svg .node.clickable:hover polygon,
+.mermaid svg .node.clickable:hover circle,
+.mermaid svg .node.clickable:hover ellipse {
+    fill: #ffab00; /* Naranja al pasar el mouse */
+}
+.mermaid svg .edgeLabel {
+    background-color: white !important;
+}
+
+
+#detalles-etapa {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+#detalles-etapa h2, #detalles-etapa h3 {
+    color: #004080;
+}
+
+#lista-subprocesos button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #005a8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+#lista-subprocesos button:hover {
+    background-color: #004080;
+}
+
+#detalle-sub-proceso-contenido {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 4px solid #ffab00;
+    background-color: #fff;
+}
+
+.nav-button {
+    padding: 10px 15px;
+    background-color: #ffab00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.nav-button:hover {
+    background-color: #e69500;
+}
+
+.info-seccion {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e6f3ff;
+    border-left: 4px solid #004080;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva - Presupuestos y Costos SINCO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150x50?text=Logo+Empresa" alt="Logo Empresa" id="logo">
+        <h1>Guía Interactiva: Procedimiento de Presupuestos y Costos en SINCO</h1>
+        <nav>
+            <a href="#flujo-proceso-visual">Flujo Principal</a>
+            <a href="#glosario-seccion">Glosario</a>
+            <a href="#responsables-seccion">Responsables</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="flujo-proceso-visual">
+            <h2>Flujo del Procedimiento</h2>
+            <p>Haz clic en una etapa del flujo para ver los detalles y pasos.</p>
+            <div class="mermaid">
+                graph TD
+                    A_INICIO[Inicio del Proyecto / Licitación] --> B_PLANIFICACION[1. Planificación y Elaboración Presupuesto];
+                    B_PLANIFICACION --> C_EJECUCION[2. Ejecución del Presupuesto];
+                    C_EJECUCION --> D_SEGUIMIENTO[3. Verificación y Seguimiento Presupuestal];
+                    D_SEGUIMIENTO --> E_CIERRE[4. Cierre y Evaluación Presupuesto];
+                    E_CIERRE --> F_FIN[Fin del Procedimiento];
+
+                    subgraph "Soporte y Control"
+                        G_SINCO_CFG[Configuración Inicial SINCO]
+                        H_AUDITORIAS[Auditorías Periódicas]
+                        I_INDICADORES[Análisis de Indicadores]
+                    end
+                    G_SINCO_CFG --> B_PLANIFICACION;
+                    H_AUDITORIAS --> D_SEGUIMIENTO;
+                    I_INDICADORES --> D_SEGUIMIENTO;
+                    I_INDICADORES --> E_CIERRE;
+            </div>
+        </section>
+
+        <section id="detalles-etapa" class="hidden">
+            <h2 id="titulo-etapa-actual"></h2>
+            <div id="lista-subprocesos">
+                <!-- Los botones de subprocesos se cargarán aquí -->
+            </div>
+            <div id="detalle-sub-proceso-contenido" class="hidden">
+                <h3 id="titulo-subproceso-actual"></h3>
+                <h4>Entradas:</h4>
+                <ul id="subproceso-entradas"></ul>
+                <h4>Pasos del Desarrollo:</h4>
+                <ol id="subproceso-pasos"></ol>
+                <h4>Intervinientes:</h4>
+                <p id="subproceso-intervinientes"></p>
+                <h4>Salidas:</h4>
+                <p id="subproceso-salidas"></p>
+                <button id="volver-a-etapa" class="nav-button">Volver a la Etapa</button>
+            </div>
+             <button id="volver-al-flujo" class="nav-button">Volver al Flujo Principal</button>
+        </section>
+
+        <section id="glosario-seccion" class="info-seccion hidden">
+            <h2>Glosario de Términos</h2>
+            <ul>
+                <li><strong>Actividad:</strong> Es un acontecimiento, tarea o unidad de trabajo que tiene un motivo específico y consume recursos.</li>
+                <li><strong>Presupuesto:</strong> Es un plan que describe los costos y los ingresos esperados de un proyecto.</li>
+                <li><strong>SINCO ERP:</strong> Producto de software que se utiliza en la industria de la construcción para gestionar proyectos y recursos.</li>
+                <!-- Añade más términos del documento -->
+            </ul>
+        </section>
+
+        <section id="responsables-seccion" class="info-seccion hidden">
+            <h2>Responsables</h2>
+            <p><strong>Gerencia:</strong> Define la estrategia financiera, aprueba presupuestos...</p>
+            <p><strong>Dirección de Presupuestos y Costos:</strong> Lidera la elaboración, control y seguimiento...</p>
+            <!-- Añade más responsables del documento -->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cimelec Ingenieros S.A.S. (Simulación)</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true });</script>
+    <script src="interactive.js"></script>
+</body>
+</html>
